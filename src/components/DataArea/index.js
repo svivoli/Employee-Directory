@@ -3,7 +3,9 @@ import "./style.css";
 
 function DataArea() {
     return (
-       
+       <div>
+           
+       </div>
     );
 };
 

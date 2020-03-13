@@ -1,6 +1,5 @@
 import React from "react";
 import Heading from "../Heading";
-import DataArea from "../DataArea";
 import "./style.css";
 
 function Table(props) {
@@ -10,7 +9,10 @@ function Table(props) {
                 <th><Heading /></th>
             </tr>
             <tr>
-                <td><DataArea /></td>
+                <td>{!props.image}</td>
+                <td>{!props.name}</td>
+                <td>{!props.email}</td>
+                <td>{!props.birthday}</td>
             </tr>
         </table>
     );
