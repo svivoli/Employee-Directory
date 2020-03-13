@@ -6,7 +6,7 @@ function Header() {
         <div className="header text-center">
             Employee Directory
         </div>
-    )
-}
+    );
+};
 
 export default Header;

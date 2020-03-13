@@ -9,14 +9,7 @@ function Main() {
     return (
         <div>
         <SearchArea />
-        <Table>
-            <tr>
-                <th><Heading /></th>
-            </tr>
-            <tr>
-                <td><DataArea /></td>
-            </tr>
-        </Table>
+        <Table />
         </div>
     );
 };
