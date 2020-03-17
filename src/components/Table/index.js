@@ -3,19 +3,37 @@ import Heading from "../Heading";
 import "./style.css";
 
 function Table(props) {
+  const test = props.data.map(user => {
     return (
+    <tr>{user.name}</tr>
+    <tr>{user.email}</tr>
+    <tr>{user.birthday}</tr>
+    )
+  })
+    return (
+      <div>
+        akhfalskd
         <table>
-            <tr>
-                <th><Heading /></th>
-            </tr>
-            <tr>
-                <td>{!props.image}</td>
-                <td>{!props.name}</td>
-                <td>{!props.email}</td>
-                <td>{!props.birthday}</td>
-            </tr>
+         {test}
         </table>
+        </div>
     );
 };
 
 export default Table;
+
+// export default class DataTable extends React.Component {
+//     renderHeadingRow = () => {
+      
+//     };
+    
+//     renderRow = () => {
+//     };
+  
+//     render() {
+    
+//       return (
+
+//       );
+//     }
+//   }
