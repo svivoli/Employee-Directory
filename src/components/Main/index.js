@@ -15,9 +15,10 @@ class Main extends React.Component {
     };
 
     componentDidMount() {
-        API.search().then((results) => {
-            console.log(results);
-            this.setState({ data: results })
+        API.search().then((res) => {
+            console.log(res);
+            const persons = res.data.results;
+            this.setState({ data: persons })
         })
     }
 
