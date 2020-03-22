@@ -1,6 +1,7 @@
 import React from "react";
 import SearchArea from "../SearchArea";
 import Table from "../Table";
+import UserRows from "../UserRows";
 import "./style.css";
 import API from "../../utils/API";
 

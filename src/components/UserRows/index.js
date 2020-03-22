@@ -4,16 +4,6 @@ import "./style.css";
 function UserRows(props) {
     console.log(props.data.employees);
     return (
-        <table>
-            <thead>
-                <tr>
-                    <td>Image</td>
-                    <td>Name</td>
-                    <td>Phone</td>
-                    <td>Email</td>
-                    <td>DOB</td>
-                </tr>
-            </thead>
             <tbody>
                 {Object.keys(props.data.employees).map(index => {
                     return (
@@ -26,9 +16,7 @@ function UserRows(props) {
                         </tr>
                     )
                 })}
-                <tr></tr>
             </tbody>
-        </table>
     )
 };
 
