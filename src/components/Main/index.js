@@ -7,26 +7,24 @@ import API from "../../utils/API";
 class Main extends React.Component {
     constructor(props) {
         super(props);
-        this.state={
-            birthday: "",
-            email: "",
-            data: {} //null
+        this.state= {
+            myProp: 'test',
+            employees: {}
         }
     };
 
     componentDidMount() {
         API.search().then((res) => {
-            console.log(res);
-            const persons = res.data.results;
-            this.setState({ data: persons })
-        })
+           const employees = res.data.results;
+           this.setState({ employees: employees })
+        });
     }
 
     render() {
         return (
             <div>
             <SearchArea />
-            <Table data={this.state.data}/>
+            <Table data={this.state} propTest={this.state.myProp} />
             </div>
         );
     };
