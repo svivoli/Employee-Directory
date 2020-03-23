@@ -2,7 +2,7 @@ import React from "react";
 import UserRows from "../UserRows";
 import "./style.css";
 
-function Table() {
+function Table(props) {
   return (
       <table>
           <thead>
@@ -14,7 +14,7 @@ function Table() {
                   <th>DOB</th>
               </tr>
           </thead>
-          <UserRows />
+          <UserRows rowData={props.data.employees} /> 
       </table>
   )
 };
