@@ -1,16 +1,18 @@
 import React from "react";
 import "./style.css";
 
-function SearchArea() {
+function SearchArea({ handleSearch }) {
     return(
-        <div>
-            <form>
-                <button>DOB</button>
-                <input type="text"></input>
-                <input type="text"></input>
-                <input type="text"></input>
-                <button>Search</button>
-            </form>
+        <div class="input-group">
+                <input 
+                class="form-control"
+                type="text"
+                onChange={event => handleSearch(event)}
+                placeholder="Search by Employee Name"
+                />
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Search</button>
+                </span>
         </div>
     )
 }

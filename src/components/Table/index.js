@@ -1,6 +1,7 @@
 import React from "react";
 import UserRows from "../UserRows";
 import "./style.css";
+import API from "../../utils/API";
 
 class Table extends React.Component {
   constructor(props) {
@@ -19,6 +20,13 @@ class Table extends React.Component {
         this.setState({ searchedUser: searchResults });
       }
     }
+  }
+
+  componentDidMount() {
+    API.search().then(res => {
+      const employees = res.data.results;
+      this.setState({ users: employees, searchedUsers: employees });
+    })
   }
 
   render() {
