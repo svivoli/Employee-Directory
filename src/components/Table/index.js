@@ -1,4 +1,5 @@
 import React from "react";
+import SearchArea from "../SearchArea";
 import UserRows from "../UserRows";
 import "./style.css";
 import API from "../../utils/API";
@@ -31,6 +32,8 @@ class Table extends React.Component {
 
   render() {
   return (
+    <div>
+      <SearchArea handleSearch={this.state.handleSearch} />
       <table>
           <thead>
               <tr>
@@ -43,6 +46,7 @@ class Table extends React.Component {
           </thead>
           <UserRows users={this.state.searchedUsers} /> 
       </table>
+    </div>
   )
   }
 };

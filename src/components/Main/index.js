@@ -1,5 +1,4 @@
 import React from "react";
-import SearchArea from "../SearchArea";
 import Table from "../Table";
 import "./style.css";
 // import API from "../../utils/API";
@@ -22,7 +21,6 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-            <SearchArea />
             <Table data={this.state} />
             </div>
         );

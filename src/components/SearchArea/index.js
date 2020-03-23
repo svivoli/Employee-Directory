@@ -3,15 +3,15 @@ import "./style.css";
 
 function SearchArea({ handleSearch }) {
     return(
-        <div class="input-group">
+        <div className="input-group">
                 <input 
-                class="form-control"
+                className="form-control"
                 type="text"
                 onChange={event => handleSearch(event)}
                 placeholder="Search by Employee Name"
                 />
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Search</button>
+                <span className="input-group-btn">
+                    <button className="btn btn-default" type="button">Search</button>
                 </span>
         </div>
     )
