@@ -9,7 +9,6 @@ class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state= {
-            myProp: 'test',
             employees: {}
         }
     };
@@ -25,7 +24,7 @@ class Main extends React.Component {
         return (
             <div>
             <SearchArea />
-            <Table data={this.state} propTest={this.state.myProp} />
+            <Table data={this.state} />
             </div>
         );
     };

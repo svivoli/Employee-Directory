@@ -7,11 +7,11 @@ function Table() {
       <table>
           <thead>
               <tr>
-                  <td>Image</td>
-                  <td>Name</td>
-                  <td>Phone</td>
-                  <td>Email</td>
-                  <td>DOB</td>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>DOB</th>
               </tr>
           </thead>
           <UserRows />
