@@ -8,9 +8,13 @@ table {
     width: 1100px;
 }
 
+table thead {
+    border-top: solid 3px lightgray;
+    color: white;
+}
+
 table th {
-    background: rgba(91, 115, 255, 0.692);
-    border: solid 1px lightgray;
+    background: rgba(15, 22, 61, 0.897);
 }
 
 table th:first-of-type {
