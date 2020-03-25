@@ -1,3 +1,11 @@
 tbody tr:nth-child(odd) {
-    background: rgba(68, 78, 134, 0.199);
+    background: rgba(68, 78, 134, 0.829);
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(15, 22, 61, 0.897);
+}
+
+tbody td {
+    color: white;
 }
