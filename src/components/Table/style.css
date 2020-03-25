@@ -7,3 +7,16 @@
 table {
     width: 1100px;
 }
+
+table th {
+    background: rgb(68, 78, 134, 0.6);
+    border: solid 1px lightgray;
+}
+
+table th:first-of-type {
+    border-left: none;
+}
+
+table th:last-of-type {
+    border-right: none;
+}
