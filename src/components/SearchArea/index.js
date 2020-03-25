@@ -4,16 +4,15 @@ import "./style.css";
 function SearchArea({ handleSearch }) {
     return (
         <div className="container">
-            <div className="input-group">
-                <input
-                    className="form-control"
-                    type="text"
-                    onChange={event => handleSearch(event)}
-                    placeholder="Search by Employee Name"
-                />
-                <span className="input-group-btn">
-                    <button className="btn" type="button">Search</button>
-                </span>
+            <div class="row justify-content-center">
+                <div className="input-group col-md-4 align-self-center">
+                    <input
+                        className="form-control"
+                        type="text"
+                        onChange={event => handleSearch(event)}
+                        placeholder="Search by Employee Name"
+                    />
+                </div>
             </div>
         </div>
     )
