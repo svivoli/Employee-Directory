@@ -4,7 +4,7 @@ import "./style.css";
 function Header() {
     return (
         <div className="header text-center">
-            Employee Directory
+            <strong>Employee Directory</strong>
         </div>
     );
 };
