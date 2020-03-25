@@ -8,17 +8,17 @@ class Table extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: [],
-      searchedUsers: [],
+      employees: [],
+      searchedEmployees: [],
       handleSearch: event => {
         const filter = event.target.value;
-        const searchResults = this.state.users.filter(item => {
+        const searchResults = this.state.employees.filter(item => {
           let values = Object.values(item)
           .join("")
           .toLowerCase();
           return values.indexOf(filter.toLowerCase()) !== -1;
         });
-        this.setState({ searchedUser: searchResults });
+        this.setState({ searchedEmployees: searchResults });
       }
     }
   }
@@ -26,7 +26,7 @@ class Table extends React.Component {
   componentDidMount() {
     API.search().then(res => {
       const employees = res.data.results;
-      this.setState({ users: employees, searchedUsers: employees });
+      this.setState({ employees: employees, searchedEmployees: employees });
     })
   }
 
@@ -44,7 +44,7 @@ class Table extends React.Component {
                   <th>DOB</th>
               </tr>
           </thead>
-          <UserRows users={this.state.searchedUsers} /> 
+          <UserRows employees={this.state.searchedEmployees} /> 
       </table>
     </div>
   )
