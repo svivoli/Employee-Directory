@@ -32,8 +32,9 @@ class Table extends React.Component {
 
   render() {
   return (
-    <div>
+    <div className="container">
       <SearchArea handleSearch={this.state.handleSearch} />
+      <div className="table">
       <table>
           <thead>
               <tr>
@@ -46,6 +47,7 @@ class Table extends React.Component {
           </thead>
           <UserRows employees={this.state.searchedEmployees} /> 
       </table>
+      </div>
     </div>
   )
   }
