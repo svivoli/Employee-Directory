@@ -12,7 +12,8 @@ A searchable, sortable employee directory that pulls data from a randomuser API.
 ### Technologies
 
 1. React
-2. Node
+2. JSX
+3. Node
 
 ### Website Components
 
