@@ -19,6 +19,44 @@ class Table extends React.Component {
           return values.indexOf(filter.toLowerCase()) !== -1;
         });
         this.setState({ searchedEmployees: searchResults });
+      },
+      handleSort: (key, employees) => {
+        this.setState({
+          employees: employees.sort((a, b) => { 
+            if (key === 'name') {
+              if (this.state.sortOrder === "desc") {
+                return b.name.last.localeCompare(a.name.last);
+              } else {
+                return a.name.last.localeCompare(b.name.last);
+              }
+            }
+            if (key === 'phone') {
+              if (this.state.sortOrder === "desc") {
+                return b.phone.localeCompare(a.phone);
+              } else {
+                return a.phone.localeCompare(b.phone);
+              }
+            }
+            if (key === 'email') {
+              if (this.state.sortOrder === "desc") {
+                return b.email.localeCompare(a.email);
+              } else {
+                return a.email.localeCompare(b.email);
+              }
+            }
+            if (key === 'dob') {
+              if (this.state.sortOrder === "desc") {
+                return b.dob.date.localeCompare(a.dob.date);
+              } else {
+                return a.dob.date.localeCompare(b.dob.date);
+              }
+            }
+            return 0;
+          })
+        });
+        this.setState({ 
+          sortOrder: this.state.sortOrder === "asc" ? "desc" : "asc"
+         });
       }
     }
   }
@@ -39,10 +77,10 @@ class Table extends React.Component {
           <thead>
               <tr>
                   <th>Image</th>
-                  <th>Name</th>
-                  <th>Phone</th>
-                  <th>Email</th>
-                  <th>DOB</th>
+                  <th onClick={() => this.state.handleSort("name", this.state.searchedEmployees)}>Name</th>
+                  <th onClick={() => this.state.handleSort("phone", this.state.searchedEmployees)}>Phone</th>
+                  <th onClick={() => this.state.handleSort("email", this.state.searchedEmployees)}>Email</th>
+                  <th onClick={() => this.state.handleSort("dob", this.state.searchedEmployees)}>DOB</th>
               </tr>
           </thead>
           <UserRows employees={this.state.searchedEmployees} /> 
